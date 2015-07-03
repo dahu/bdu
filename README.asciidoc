@@ -1,0 +1,37 @@
+== bdu
+
+__better ++du++__
+
+++bdu++ displays file sizes in human readable format, but sorted
+correctly by size and (if supercat is available) coloured by magnitude.
+
+=== Dependencies
+
+* The https://en.wikipedia.org/wiki/Du_(Unix)[du] system tool
+* http://www.newlisp.org/[newLISP]
+* http://supercat.nosredna.net/[Supercat Text Colorizer] [optional]
+
+=== Usage
+
+.Show file sizes in increasing order for all files in the current directory:
+
+  bdu
+
+.Show file sizes in increasing order for all ++png++ files in the current directory:
+
+  bdu *.png
+
+NOTE: Quote the glob if there are filenames containing special characters.
+
+=== Install
+
+  > cp bin/* ~/bin/
+
+__Or__ to a valid, writeable directory in your ++$PATH++
+
+==== Coloured Output
+
+If you have the http://supercat.nosredna.net/[supercat] tool (++spc++)
+then add the ++spcrc/spcrc-bdu++ file to your ++~/.spcrc/++ directory.
+
+  > cp spcrc/spcrc-bdu ~/.spcrc/
