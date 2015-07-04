@@ -2,7 +2,7 @@
 # Copyright (c) 2015, Barry Arthur <barry.arthur@gmail.com>
 
 if [ -f ~/.spcrc/spcrc-bdu ]; then
-  bdu.lsp $@ | spc -c ~/.spcrc/spcrc-bdu
+  bdu.lsp "$@" | spc -t bdu
 else
-  bdu.lsp $@
+  bdu.lsp "$@"
 fi
